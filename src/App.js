@@ -12,7 +12,7 @@ import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div className="App">
-      <Header  sticky='top'></Header>
+      <Header ></Header>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />

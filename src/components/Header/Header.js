@@ -6,7 +6,7 @@ const Header = () => {
         <div  sticky='top'>
   <Navbar bg="dark" variant="dark" className='py-2 mb-1'>
     <Container >
-    <Navbar.Brand as={Link} to="/">Responsible Doctor</Navbar.Brand>
+    <Navbar.Brand as={Link} to="/">Doctor Service</Navbar.Brand>
     <Nav className="me-auto">
       <Nav.Link as={Link} to="/" className='text-light'>Home</Nav.Link>
       <Nav.Link as={Link} to="/blogs" className='text-light'>Blogs</Nav.Link>

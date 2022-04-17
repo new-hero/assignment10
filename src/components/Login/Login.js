@@ -14,7 +14,7 @@ const Login = () => {
     <Form.Label>Password</Form.Label>
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
-  <p className='mt-3'>New User? <span> Create a profile</span> </p>
+  <p className='mt-3'>New for Service? <span className='text-danger'> Create a profile</span> </p>
   <Button variant="primary" type="submit">
     Login
   </Button>

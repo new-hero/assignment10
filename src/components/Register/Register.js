@@ -4,7 +4,7 @@ import Login from './../Login/Login';
 
 const Register = () => {
     return (
-        <div className='w-25 mx-auto mt-5'>
+        <div className='w-50 mx-auto mt-5'>
             <Form>
   <Form.Group className="mb-3" controlId="formBasicEmail">
     <Form.Label>Full Name</Form.Label>
@@ -20,7 +20,7 @@ const Register = () => {
     <Form.Control type="password" placeholder="Password" />
   </Form.Group>
   <Form.Group className="mb-3" controlId="formBasicCheckbox">
-    <Form.Check type="checkbox" label="Check me out" />
+    <Form.Check type="checkbox" label="I will agree all terms and condition" />
   </Form.Group>
   <p className='mt-3'>Have a Profile? <span className='text-primary'> Login </span> </p>
   <Button variant="primary" type="submit">
