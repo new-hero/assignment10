@@ -9,6 +9,9 @@
     font-size: 25px;
     padding: 10px;    
 }
-.banner{
-    background-color: powderblue
+@media only screen and (max-width:480px) {
+    .service{
+            grid-template-columns: repeat(1, 1fr);
+            text-align: center;
+    }
 }

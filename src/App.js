@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Blogs from './components/Blogs/Blogs';
 import Register from './components/Register/Register';
 import Footer from './components/Footer/Footer';
+import Notfound from './components/Notfound/Notfound';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register/>} />
+        <Route path="*" element={<Notfound></Notfound>} />
       </Routes>
       <Footer></Footer>
     </div>
