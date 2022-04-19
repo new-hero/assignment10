@@ -8,7 +8,6 @@ import auth from '../../fairbase.init';
 const Register = () => {
   const handleSubmit= e => {
     e.preventDefault();
-    const name= e.target.username.value
     const email= e.target.useremail.value
     const password= e.target.userpassword.value
     createUserWithEmailAndPassword(email, password)
@@ -23,7 +22,7 @@ const Register = () => {
     createUserWithEmailAndPassword,
     user
    
-  ] = useCreateUserWithEmailAndPassword(auth);
+  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
   if(user){
     navigate('/')
   }
@@ -31,10 +30,7 @@ const Register = () => {
     return (
         <div className='w-25 mx-auto mt-5'>
           <Form onSubmit={handleSubmit}>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
-              <Form.Label>Full Name</Form.Label>
-              <Form.Control type="text" name='username' placeholder="Enter full name" />
-            </Form.Group>
+           
             <Form.Group className="mb-3" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
               <Form.Control type="email" name='useremail' placeholder="Enter email" />
