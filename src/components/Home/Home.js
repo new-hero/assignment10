@@ -34,14 +34,14 @@ const Home = () => {
     return (
         <div className='container'>
             <div className='banner mb-5 bg-light'>
-            <div className='row'>
-            <div className='col-lg-6 d-flex justify-content-center align-items-center'>
-                <h1 className='text-dark'> Doctor Service</h1>
-            </div>
-            <div className='col-lg-6'>
-                <img src={image4} className='img-fluid' alt='service'/>
-            </div>
-            </div>
+                <div className='row'>
+                    <div className='col-lg-6 d-flex justify-content-center align-items-center'>
+                        <h1 className='text-dark py-4'> Doctor Service</h1>
+                    </div>
+                    <div className='col-lg-6'>
+                        <img src={image4} className='img-fluid' alt='service'/>
+                    </div>
+                </div>
             </div>
 
 

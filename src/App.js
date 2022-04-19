@@ -9,6 +9,8 @@ import Blogs from './components/Blogs/Blogs';
 import Register from './components/Register/Register';
 import Footer from './components/Footer/Footer';
 import Notfound from './components/Notfound/Notfound';
+import Sdetailes from './components/Sdetailes/Sdetailes'
+import Success from './components/Success/Success';
 
 function App() {
   return (
@@ -17,8 +19,11 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/service/:service" element={<Sdetailes></Sdetailes>} />
+        <Route path="/about" element={<About />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/success" element={<Success></Success>} />
         <Route path="/register" element={<Register/>} />
         <Route path="*" element={<Notfound></Notfound>} />
       </Routes>
