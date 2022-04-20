@@ -1,6 +1,6 @@
 # Doctor Service
 
-This is live website link [www.google.com]
+This is live website link [https://assignment10new-hero.netlify.app/]
 
 # Getting Started with Create React App
 
