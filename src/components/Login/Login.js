@@ -64,8 +64,8 @@ if (error) {
               Login
             </Button>
           </Form>
-            <p className='mt-3'>New in Doctor Service? <span className='text-danger' onClick={handleRegister}> Create a profile. </span> </p>
-            <p>forget password?? <span onClick={handlereset}> Reset password</span></p>
+            <p className='mt-3'>New in Doctor Service? <span className='btn btn-success' onClick={handleRegister}> Create a profile. </span> </p>
+            <p>forget password?? <span onClick={handlereset} className='btn btn-danger'> Reset password</span></p>
             <p className='text-danger'> {errorelement}</p>
             <br/>
             <br/>

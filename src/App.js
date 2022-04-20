@@ -27,7 +27,6 @@ function App() {
         <Route path="/register" element={<Register/>} />
         <Route path="*" element={<Notfound></Notfound>} />
       </Routes>
-      <Footer></Footer>
     </div>
   );
 }

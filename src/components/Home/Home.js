@@ -1,8 +1,9 @@
 import React from 'react';
+import Footer from '../Footer/Footer';
 import image1 from '../../images/c.jpg'
 import image2 from '../../images/b.jpg'
 import image3 from '../../images/d.jpg'
-import image4 from '../../images/a.jpg'
+import image4 from '../../images/a.png'
 import Service from '../Service/Service';
 import './Home.css'
 // import image1 from '../../images/a.jpg'
@@ -32,6 +33,7 @@ const services=[
 
 const Home = () => {
     return (
+        <>
         <div className='container'>
             <div className='banner mb-5 bg-light'>
                 <div className='row'>
@@ -50,9 +52,11 @@ const Home = () => {
             services.map(service=> <Service key={service.id} service={service}></Service>)
             }
             </div>
+
             
         </div>
-        
+        <Footer></Footer>
+        </>
     );
 };
 
