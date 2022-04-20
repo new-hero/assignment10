@@ -46,7 +46,7 @@ if (error) {
   const handlereset= async () => {
     const email = emailRef.current.value;
     await sendPasswordResetEmail(email);
-    alert('Sent email');
+    toast('Sent email');
   }
 
     return (
@@ -65,12 +65,13 @@ if (error) {
             </Button>
           </Form>
             <p className='mt-3'>New in Doctor Service? <span className='btn btn-success' onClick={handleRegister}> Create a profile. </span> </p>
-            <p>forget password?? <span onClick={handlereset} className='btn btn-danger'> Reset password</span></p>
+            <p>Forget password?? <span onClick={handlereset} className='btn btn-danger'> Reset password</span></p>
             <p className='text-danger'> {errorelement}</p>
             <br/>
             <br/>
             <div className='text-center'> 
               <Sociallogin ></Sociallogin>
+              <ToastContainer></ToastContainer>
             </div>
         </div>
     );
