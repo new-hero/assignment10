@@ -6,26 +6,31 @@ import auth from '../../fairbase.init';
 
 
 const Register = () => {
-  const handleSubmit= e => {
-    e.preventDefault();
-    const email= e.target.useremail.value
-    const password= e.target.userpassword.value
-    createUserWithEmailAndPassword(email, password)
-    
-  }
-
+  
   const navigate=useNavigate();
   const handlelogin= ()=>{
     navigate("/login")
   }
   const [
     createUserWithEmailAndPassword,
-    user
-   
+    user,
+    loading,
+    error,
   ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification:true});
   if(user){
     navigate('/')
   }
+  let errorelement
+  if (error) {
+      errorelement= error.message;
+  }
+  const handleSubmit= e => {
+    e.preventDefault();
+    const email= e.target.useremail.value
+    const password= e.target.userpassword.value
+    createUserWithEmailAndPassword(email, password)
+  }
+
   
     return (
         <div className='w-25 mx-auto mt-5'>
@@ -45,6 +50,8 @@ const Register = () => {
             </Button>
           </Form>
             <p className='mt-3'>Have a Profile? <span className='text-primary' onClick={handlelogin}> Go to Login </span> </p>  
+            <p className='text-danger'> {errorelement}</p>
+
           </div>
     );
 };
