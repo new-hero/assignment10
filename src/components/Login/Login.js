@@ -9,6 +9,7 @@ import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { sendPasswordResetEmail } from 'firebase/auth';
 import Sociallogin from '../SocialLogin/Sociallogin';
 
+
 const Login = () => {
   const navigate=useNavigate();
   const location= useLocation()
@@ -39,11 +40,15 @@ if (error) {
   const handleRegister= ()=>{
     navigate("/register")
   }
+  const [sendPasswordResetEmail, sending ] = useSendPasswordResetEmail(
+    auth
+  );
   const handlereset= async () => {
     const email = emailRef.current.value;
     await sendPasswordResetEmail(email);
     alert('Sent email');
   }
+
     return (
         <div className='w-25 mx-auto mt-5'>
           <Form onSubmit={handleSubmit}>

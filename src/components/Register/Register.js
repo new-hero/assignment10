@@ -8,6 +8,7 @@ import auth from '../../fairbase.init';
 const Register = () => {
   
   const navigate=useNavigate();
+
   const handlelogin= ()=>{
     navigate("/login")
   }
@@ -16,7 +17,7 @@ const Register = () => {
     user,
     loading,
     error,
-  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification : true});
+  ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true} );
   if(user){
     navigate('/')
   }
