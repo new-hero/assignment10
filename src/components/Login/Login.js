@@ -7,6 +7,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import { sendPasswordResetEmail } from 'firebase/auth';
+import Sociallogin from '../SocialLogin/Sociallogin';
 
 const Login = () => {
   const navigate=useNavigate();
@@ -17,13 +18,16 @@ const Login = () => {
   const passwordRef=useRef('');
   const [
     signInWithEmailAndPassword,
-    user, error ] = useSignInWithEmailAndPassword(auth );
+    user,
+    loading,
+    error,
+  ] = useSignInWithEmailAndPassword(auth);
   if(user){
     navigate(from, {replace:true});
   }
 let errorelement
 if (error) {
-      errorelement=error.message
+    errorelement= error.message;
 }
   
   const handleSubmit=event=>{
@@ -57,7 +61,12 @@ if (error) {
           </Form>
             <p className='mt-3'>New in Doctor Service? <span className='text-danger' onClick={handleRegister}> Create a profile. </span> </p>
             <p>forget password?? <span onClick={handlereset}> Reset password</span></p>
-            <p>{errorelement}</p>
+            <p className='text-danger'> {errorelement}</p>
+            <br/>
+            <br/>
+            <div className='text-center'> 
+              <Sociallogin ></Sociallogin>
+            </div>
         </div>
     );
 };
