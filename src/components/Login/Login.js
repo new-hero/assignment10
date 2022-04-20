@@ -6,7 +6,6 @@ import auth from '../../fairbase.init';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
-import { sendPasswordResetEmail } from 'firebase/auth';
 import Sociallogin from '../SocialLogin/Sociallogin';
 
 
